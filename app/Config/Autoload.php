@@ -43,7 +43,10 @@ class Autoload extends AutoloadConfig
     public $psr4 = [
         APP_NAMESPACE => APPPATH, // For custom app namespace
         'Config'      => APPPATH . 'Config',
+        'Modules' => APPPATH . 'Modules',
+        'IonAuth' => APPPATH . 'Modules/Auth',
     ];
+
 
     /**
      * -------------------------------------------------------------------
@@ -83,5 +86,7 @@ class Autoload extends AutoloadConfig
      *
      * @var array<int, string>
      */
-    public $files = [];
+    public $files = [
+        APPPATH . 'Helpers/app_helper.php'
+    ];
 }

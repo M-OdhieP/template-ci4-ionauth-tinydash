@@ -1,0 +1,25 @@
+<?php
+function dashboard_view($view)
+{
+    return "Modules\Dashboard\Views" . DIRECTORY_SEPARATOR . $view;
+}
+function superadmin($withAdmin = false)
+{
+    $ionAuth = new \App\Modules\Auth\Libraries\IonAuth();
+
+    if ($withAdmin == true) {
+        return $ionAuth->inGroup(['superadmin', 'admin']);
+    } else {
+        return $ionAuth->inGroup('superadmin');
+    }
+}
+function autherror($field)
+{
+    $validation = \Config\Services::validation();
+    if ($validation->hasError($field)) :
+        echo '<div><small class="form-text text-danger pt-0 mt-0  mb-3">';
+        echo $validation->getError($field);
+        echo '</small>
+        </div>';
+    endif;
+}

@@ -8,6 +8,9 @@ use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
+use App\Filters\IonAuth;
+use App\Filters\Admin;
+use App\Filters\Superadmin;
 
 class Filters extends BaseConfig
 {
@@ -23,6 +26,9 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'IonAuth'       => IonAuth::class,
+        'Admin' => Admin::class,
+        'Superadmin' => Superadmin::class,
     ];
 
     /**
