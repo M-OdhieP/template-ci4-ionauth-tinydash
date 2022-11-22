@@ -74,16 +74,16 @@
                         <a class="nav-link pl-3" href="<?= base_url('auth') ?>"><span class="ml-1 item-text">User List</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pl-3" href="./chart-chartjs.html"><span class="ml-1 item-text">Create User</span></a>
+                        <a class="nav-link pl-3" href="<?= base_url("auth/create_user") ?>"><span class="ml-1 item-text">Create User</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pl-3" href="./chart-apexcharts.html"><span class="ml-1 item-text">Groups</span></a>
+                        <a class="nav-link pl-3" href="<?= base_url("auth/groups") ?>"><span class="ml-1 item-text">Groups</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pl-3" href="./datamaps.html"><span class="ml-1 item-text">Create Group</span></a>
+                        <a class="nav-link pl-3" href="<?= base_url("auth/create_group") ?>"><span class="ml-1 item-text">Create Group</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pl-3" href="./datamaps.html"><span class="ml-1 item-text">Change Password</span></a>
+                        <a class="nav-link pl-3" href="<?= base_url("auth/change_password") ?>"><span class="ml-1 item-text">Change Password</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link pl-3" href="<?= base_url('auth/logout') ?>"><span class="ml-1 item-text">Logout</span></a>
