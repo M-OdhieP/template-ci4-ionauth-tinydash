@@ -1,0 +1,12 @@
+__ci_last_regenerate|i:1669110823;redirect_url|s:22:"http://localhost:8080/";_ci_previous_url|s:26:"http://localhost:8080/auth";identity|s:27:"hello@cindalogikagrafia.com";email|s:27:"hello@cindalogikagrafia.com";user_id|s:1:"7";old_last_login|s:10:"1669099058";last_check|i:1669101224;message|s:428:"<!-- DEBUG-VIEW START 1 APPPATH\Modules\Auth\Views\Messages\list.php -->
+	<div class="alert alert-warning alert-dismissible fade show" role="alert" id="messages">
+					Informasi Akun Berhasil Diperbaharui				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+
+
+
+<!-- DEBUG-VIEW ENDED 1 APPPATH\Modules\Auth\Views\Messages\list.php -->
+";__ci_vars|a:1:{s:7:"message";s:3:"old";}

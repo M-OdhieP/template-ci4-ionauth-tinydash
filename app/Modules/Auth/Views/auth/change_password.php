@@ -1,20 +1,10 @@
-<?= $this->extend(dashboard_view("_layout")) ?>
+<?= $this->extend(dashboard_view('_layouts')); ?>
 <?= $this->section("content") ?>
 <?php $validation = \Config\Services::validation(); ?>
 <div class="page-content">
       <section class="row">
             <div class="col-12 p-0">
-                  <?php $breadcrumb = [
-                        [
-                              'name' => 'Dashboard',
-                              'link' => 'panel/'
-                        ],
-                        [
-                              'name' => 'Users',
-                              'link' => 'auth/'
-                        ]
-                  ];
-                  breadcrumb($breadcrumb, 'Ubah Password') ?>
+
                   <div class="card">
                         <div class="card-body">
                               <div id="infoMessage" class="text-danger"><?php echo $message; ?></div>

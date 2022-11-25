@@ -1,20 +1,10 @@
-<?= $this->extend(panelview("cms\_layout")) ?>
+<?= $this->extend(dashboard_view('_layouts')); ?>
 <?= $this->section("content") ?>
 <div id="infoMessage"><?php echo $message; ?></div>
 <div class="page-content">
       <section class="row">
             <div class="col-12 p-0">
-                  <?php $breadcrumb = [
-                        [
-                              'name' => 'Dashboard',
-                              'link' => 'panel/'
-                        ],
-                        [
-                              'name' => 'Groups',
-                              'link' => 'auth/groups'
-                        ]
-                  ];
-                  breadcrumb($breadcrumb, 'Tambah Group Baru') ?>
+
                   <div class="card">
                         <div class="card-header">
                               <h4>

@@ -131,8 +131,15 @@
     <script src="<?= base_url("dashboard/js/tinycolor-min.js") ?>"></script>
     <script src="<?= base_url("dashboard/js/config.js") ?>"></script>
     <script src="<?= base_url("dashboard/js/apps.js") ?>"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <?= $this->renderSection('js'); ?>
+
+    <script>
+        $("#messages").fadeTo(2000, 500).slideUp(500, function() {
+            $("#messages").slideUp(500);
+        });
+    </script>
 
 </body>
 

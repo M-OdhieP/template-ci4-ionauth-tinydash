@@ -95,6 +95,8 @@ class Auth extends BaseController
 	 */
 	public function index()
 	{
+
+
 		if (!$this->ionAuth->loggedIn()) {
 			// redirect them to the login page
 			return redirect()->to('/auth/login');
@@ -104,7 +106,7 @@ class Auth extends BaseController
 			//show_error('You must be an administrator to view this page.');
 			throw new \Exception('You must be an administrator to view this page.');
 		} else {
-			$this->data['title'] = 'users';
+			$this->data['title'] = "User List";
 
 			// set the flash data error message if there is one
 			$this->data['message'] = $this->validation->getErrors() ? $this->validation->listErrors($this->validationListTemplate) : $this->session->getFlashdata('message');
@@ -437,6 +439,10 @@ class Auth extends BaseController
 	 */
 	public function deactivate(int $id = 0)
 	{
+
+		$this->data['user'] = $this->ionAuth->user($id)->row();
+		$this->data['title'] = " Apakah Anda yakin ingin menonaktifkan Users " . $this->data['user']->first_name . " " . $this->data['user']->last_name;
+
 		if (!$this->ionAuth->loggedIn() || !$this->ionAuth->isAdmin()) {
 			// redirect them to the home page because they must be an administrator to view this
 			throw new \Exception('You must be an administrator to view this page.');
