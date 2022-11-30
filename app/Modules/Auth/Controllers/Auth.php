@@ -825,11 +825,11 @@ class Auth extends BaseController
 				$groupUpdate = $this->ionAuth->updateGroup($id, $this->request->getPost('group_name'), ['description' => $this->request->getPost('group_description')]);
 
 				if ($groupUpdate) {
-					$this->session->setFlashdata('message', lang('Auth.edit_group_saved'));
+					$this->session->setFlashdata('message', $this->ionAuth->messages());
 				} else {
 					$this->session->setFlashdata('message', $this->ionAuth->errors($this->validationListTemplate));
 				}
-				return redirect()->to('/auth');
+				return redirect()->to('/auth/groups');
 			}
 		}
 
@@ -912,9 +912,10 @@ class Auth extends BaseController
 	}
 	public function groups()
 	{
+
 		$this->data['message'] = $this->validation->getErrors() ? $this->validation->listErrors($this->validationListTemplate) : $this->session->getFlashdata('message');
 		$this->data['groups'] = $this->ionAuth->Groups()->result();
-		$this->data['title'] = 'users';
+		$this->data['title'] = 'Group List';
 		// echo '<pre>';
 		// var_dump($this->data['groups']);
 		// echo '</pre>';

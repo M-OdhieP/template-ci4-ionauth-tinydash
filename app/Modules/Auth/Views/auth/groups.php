@@ -5,7 +5,6 @@
     <div class="row justify-content-center">
         <div class="col-12">
             <h2 class="mb-2 page-title"><?= $title ?></h2>
-            <div id="infoMessage"><?php echo $message; ?></div>
             <div class="row my-4">
                 <div class="col-md-12">
                     <div class="card shadow">
@@ -30,8 +29,6 @@
                                                     <a href="<?= base_url("auth/delete_group/" . $group->id) ?>" class="btn-delete"><button type="button" class="btn mb-2 btn-danger"><span class="fe fe-trash fe-16 mr-2"></span>Delete</button></a>
                                                 </div>
                                             </td>
-
-
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
@@ -40,10 +37,11 @@
                         </div>
                     </div>
                 </div>
-            </div> <!-- end section -->
-        </div> <!-- .col-12 -->
-    </div> <!-- .row -->
+            </div>
+        </div>
+    </div>
 </div>
+<?= $message ?>
 
 <?= $this->endSection() ?>
 
@@ -81,48 +79,3 @@
     });
 </script>
 <?= $this->endSection(); ?>
-
-
-<div class="page-content">
-    <section class="row">
-        <div class="col-12 p-0">
-            <div id="infoMessage"><?php echo $message; ?></div>
-
-            <div class="card">
-                <div class="card-header d-flex justify-content-between">
-                    <h4>Daftar Group</h4>
-                    <a href="<?= base_url("auth/create_group") ?>" class="btn btn-outline-dark mb-2">
-                        <i class="bi bi-person-plus-fill"></i>
-                        Tambah Group Baru
-                    </a>
-                </div>
-                <div class="card-body table-responsive">
-                    <table class="table table-bordered">
-                        <thead class="bg-light">
-                            <th>Nama Group</th>
-                            <th>Deskripsi</th>
-                            <th class="text-center">Action</th>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($groups as $group) : ?>
-                                <tr>
-                                    <td><?= $group->name ?></td>
-                                    <td><?= $group->description ?></td>
-                                    <td class="text-center">
-                                        <div class="btn-group" role="group">
-                                            <a href="<?= base_url('auth/edit_group/' . $group->id) ?>" class="btn btn-outline-dark" data-toggle="tooltip" title="Edit"><i class="bi bi-pen"></i></a>
-                                            <a href="<?= base_url('auth/delete_group/' . $group->id) ?>" class="btn btn-outline-dark hapus" data-toggle="tooltip" title="Hapus"><i class="bi bi-trash"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-
-                    <div class="m-3">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>

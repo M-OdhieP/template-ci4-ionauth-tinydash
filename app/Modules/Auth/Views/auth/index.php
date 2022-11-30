@@ -10,9 +10,6 @@
 	<div class="row justify-content-center">
 		<div class="col-12">
 			<h2 class="mb-2 page-title"><?= $title ?></h2>
-
-
-
 			<div class="row my-4">
 				<div class="col-md-12">
 					<div class="card shadow">
@@ -51,13 +48,12 @@
 								</tbody>
 
 							</table>
-
 						</div>
 					</div>
 				</div>
-			</div> <!-- end section -->
-		</div> <!-- .col-12 -->
-	</div> <!-- .row -->
+			</div>
+		</div>
+	</div>
 </div>
 <?= $message ?>
 

@@ -31,20 +31,14 @@
 
     <div class="row h-100 m-0 p-0">
       <div class="col-lg-4 col-md-8 m-auto">
-
         <div class="card text-bg-dark">
           <div class="card-header ">
             <div class="d-flex flex-column  align-items-center">
-
               <img class="img-fluid login-logo" src="<?= base_url("dashboard/assets/images/app-logo.png") ?>" alt="" srcset="">
               <h3> Login Page</h3>
             </div>
-
-
           </div>
           <div class="card-body">
-            <!-- <h5 class="card-title">Dark card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
             <form action="<?= base_url('auth/login') ?>" method="post" accept-charset="utf-8">
               <div class="mb-3">
                 <label for="identity" class="form-label">Email address</label>
@@ -54,11 +48,9 @@
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" name="password">
               </div>
-
               <div class="d-grid">
                 <button type="submit" class="btn btn-primary">Login</button>
               </div>
-
             </form>
           </div>
         </div>

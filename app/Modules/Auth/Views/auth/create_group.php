@@ -1,41 +1,36 @@
 <?= $this->extend(dashboard_view('_layouts')); ?>
-<?= $this->section("content") ?>
-<div id="infoMessage"><?php echo $message; ?></div>
-<div class="page-content">
-      <section class="row">
-            <div class="col-12 p-0">
+<?= $this->section('content'); ?>
+<div class="container-fluid">
+      <div class="row justify-content-center">
+            <div class="col-12">
+                  <h2 class="mb-2 page-title">Create Group</h2>
+                  <div class="row my-4">
+                        <div class="col-md-12">
+                              <div class="card shadow">
+                                    <div class="card-body">
+                                          <form action="<?= base_url('auth/create_group') ?>" method="POST" enctype="multipart/form-data">
+                                                <div class="form-row">
+                                                      <div class="form-group col-md-6">
+                                                            <label for="group_name">Group Name</label>
+                                                            <input type="text" class="form-control" name="group_name" id="group_name">
+                                                            <?php autherror('group_name') ?>
+                                                      </div>
+                                                      <div class="form-group col-md-6">
+                                                            <label for="description">Description</label>
+                                                            <input type="text" class="form-control" name="description" id="description">
+                                                            <?php autherror('description') ?>
+                                                      </div>
+                                                </div>
 
-                  <div class="card">
-                        <div class="card-header">
-                              <h4>
-                                    Silakan masukkan informasi grup di bawah ini
-                              </h4>
-                        </div>
-                        <div class="card-body">
-                              <!-- icon bootstrap -->
-                              <form action="<?= base_url('auth/create_group') ?>" method="POST" enctype="multipart/form-data">
-                                    <div class="row justify-content-center">
-                                          <div class="col-11">
-                                                <label for="group_name" class="form-label">Nama Group:</label>
-                                                <div class="input-group">
-                                                      <span class="input-group-text" id="fnIcon"><i class="bi bi-diagram-3-fill"></i></span>
-                                                      <input type="text" class="form-control" name="group_name" id="group_name" placeholder="Nama Group" aria-describedby="fnIcon">
-                                                </div>
-                                                <label for="description" class="form-label">Deskripsi:</label>
-                                                <div class="input-group">
-                                                      <span class="input-group-text" id="fnIcon"><i class="bi bi-body-text"></i></span>
-                                                      <input type="text" class="form-control" name="description" id="description" placeholder="Deskripsi" aria-describedby="fnIcon">
-                                                </div>
-                                                <div class="pt-4">
-                                                      <button type="submit" class="btn btn btn-outline-dark"><i class="fas fa-user-plus"></i>Tambah Group</button>
-                                                </div>
-                                          </div>
+
+                                                <button type="submit" class="btn btn-primary">Create Group</button>
+                                          </form>
+
                                     </div>
-                              </form>
+                              </div>
                         </div>
                   </div>
             </div>
-      </section>
-
+      </div>
 </div>
-<?= $this->endSection() ?>
+<?= $this->endSection(); ?>
