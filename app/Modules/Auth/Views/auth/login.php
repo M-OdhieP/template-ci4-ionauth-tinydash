@@ -1,58 +1,74 @@
- <!DOCTYPE html>
- <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
- <head>
-   <!-- Required meta tags -->
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <title>Corona Admin</title>
-   <!-- plugins:css -->
-   <link rel="stylesheet" href="<?= base_url('dashboard/login/materialdesignicons.min.css') ?>">
-   <link rel="stylesheet" href="<?= base_url('dashboard/login/style.css') ?>">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
 
- </head>
-
- <body>
-
-   <style>
-     .auth.login-bg {
-       background: url("<?= base_url('dashboard/login/login_image.jpg') ?>");
-       background-size: cover;
-     }
-   </style>
-
-   <div class="container-scroller">
-     <div class="container-fluid page-body-wrapper full-page-wrapper">
-       <div class="row w-100 m-0">
-         <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
-           <div class="card col-lg-4 mx-auto">
-             <div class="card-body px-5 py-5">
-               <h3 class="card-title text-left mb-3">Login</h3>
-               <form action="<?= base_url('auth/login') ?>" method="post" accept-charset="utf-8">
-                 <div class="form-group">
-                   <label>Email address</label>
-                   <input type="email" id="identity" name="identity" class="form-control p_input" autofocus>
-                 </div>
-                 <div class="form-group">
-                   <label>Password</label>
-                   <input type="password" id="password" name="password" class="form-control p_input">
-                 </div>
-
-                 <div class="text-center mt-4">
-                   <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
-                 </div>
+  <link rel="stylesheet" href="<?= base_url("dashboard/login/bootstrap.min.css") ?>">
 
 
-               </form>
-             </div>
-           </div>
-         </div>
-         <!-- content-wrapper ends -->
-       </div>
-       <!-- row ends -->
-     </div>
-     <!-- page-body-wrapper ends -->
-   </div>
- </body>
+</head>
 
- </html>
+<body>
+
+  <style>
+    .login-container {
+      background: url(<?= base_url("dashboard/login/login_image.jpg") ?>);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+    }
+
+    .login-logo {
+      filter: brightness(0) invert(1);
+    }
+  </style>
+
+  <div class="login-container">
+
+    <div class="row h-100 m-0 p-0">
+      <div class="col-lg-4 col-md-8 m-auto">
+
+        <div class="card text-bg-dark">
+          <div class="card-header ">
+            <div class="d-flex flex-column  align-items-center">
+
+              <img class="img-fluid login-logo" src="<?= base_url("dashboard/assets/images/app-logo.png") ?>" alt="" srcset="">
+              <h3> Login Page</h3>
+            </div>
+
+
+          </div>
+          <div class="card-body">
+            <!-- <h5 class="card-title">Dark card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <form action="<?= base_url('auth/login') ?>" method="post" accept-charset="utf-8">
+              <div class="mb-3">
+                <label for="identity" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="identity" name="identity">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password">
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Login</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+<script src="<?= base_url("dashboard/login/bootstrap.min.js") ?>"></script>
+
+</html>

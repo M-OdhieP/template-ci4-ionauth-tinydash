@@ -1,0 +1,10 @@
+{
+  "User Setting": [
+    { "url": "auth", "title": "User List" },
+    { "url": "auth/create_user", "title": "Create User" },
+    { "url": "auth/groups", "title": "Groups" },
+    { "url": "auth/create_group", "title": "Create Group" },
+    { "url": "auth/change_password", "title": "Change Password" },
+    { "url": "auth/logout", "title": "Logout" }
+  ]
+}

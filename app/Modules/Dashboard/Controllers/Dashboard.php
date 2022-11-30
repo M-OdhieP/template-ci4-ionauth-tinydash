@@ -15,7 +15,6 @@ class Dashboard extends BaseController
     public function index()
     {
 
-
         $data = [
             'title'  => 'Bina Marga dan Bina Konstruksi',
         ];

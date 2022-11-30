@@ -1,4 +1,5 @@
 <?php
+
 function dashboard_view($view)
 {
     return "Modules\Dashboard\Views" . DIRECTORY_SEPARATOR . $view;
@@ -22,4 +23,11 @@ function autherror($field)
         echo '</small>
         </div>';
     endif;
+}
+
+function getUsername()
+{
+    $ionAuth = new \App\Modules\Auth\Libraries\IonAuth();
+    $user = $ionAuth->user()->row();
+    return $user->first_name . ' ' . $user->last_name;
 }

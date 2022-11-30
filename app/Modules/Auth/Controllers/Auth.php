@@ -464,7 +464,7 @@ class Auth extends BaseController
 				$user = $this->ionAuth->user($id)->row();
 				if ($user->email ==	"hello@cindalogikagrafia.com") {
 					$this->session->setFlashdata('error', 'Akun Superadmin tidak Dapat Dinonaktifkan, silahkan hubungi penyedia layanan');
-					return redirect()->to(base_url("panel/"))->withCookies();
+					return redirect()->to(base_url("dashboard"))->withCookies();
 				}
 				//end custom function
 
@@ -617,7 +617,7 @@ class Auth extends BaseController
 			$user = $this->ionAuth->user($id)->row();
 			if ($user->email ==	"hello@cindalogikagrafia.com") {
 				$this->session->setFlashdata('error', 'Akun Superadmin tidak Dapat Di Edit, silahkan hubungi penyedia layanan');
-				return redirect()->to(base_url("panel/"))->withCookies();
+				return redirect()->to(base_url("dashboard"))->withCookies();
 			}
 		}
 
@@ -802,7 +802,7 @@ class Auth extends BaseController
 		if (!superadmin()) {
 
 			$this->session->setFlashdata('error', 'Anda Tidak Punya Akses Untuk Mengedit Group');
-			return redirect()->to(base_url("panel/"))->withCookies();
+			return redirect()->to(base_url("dashboard"))->withCookies();
 		}
 		// bail if no group id given
 		if (!$id) {
@@ -889,7 +889,7 @@ class Auth extends BaseController
 			$user = $this->ionAuth->user($id)->row();
 			if ($user->email ==	"hello@cindalogikagrafia.com") {
 				$this->session->setFlashdata('error', 'Akun Superadmin tidak Dapat DiHapus, silahkan hubungi penyedia layanan');
-				return redirect()->to(base_url("panel/"))->withCookies();
+				return redirect()->to(base_url("dashboard"))->withCookies();
 			}
 		}
 		//end custom function
@@ -902,7 +902,7 @@ class Auth extends BaseController
 	{
 		if (!superadmin()) {
 			$this->session->setFlashdata('error', 'Anda tidak punya akses untuk menghapus Group');
-			return redirect()->to(base_url("panel/"))->withCookies();
+			return redirect()->to(base_url("dashboard"))->withCookies();
 		}
 
 

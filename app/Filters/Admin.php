@@ -15,7 +15,7 @@ class Admin implements FilterInterface
 		if (!($this->ionAuth->isAdmin()) and !($this->ionAuth->inGroup('superadmin'))) {
 			session()->set('redirect_url', current_url());
 			session()->setFlashdata('error', 'anda tidak punya akses');
-			return redirect()->to('panel');
+			return redirect()->to('dashboard');
 		}
 		return true;
 	}

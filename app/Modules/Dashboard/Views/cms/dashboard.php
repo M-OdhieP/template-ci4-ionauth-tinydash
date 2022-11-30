@@ -2,4 +2,6 @@
 
 <?= $this->section('content'); ?>
 hello
+
+<?= getUsername() ?>
 <?= $this->endSection(); ?>

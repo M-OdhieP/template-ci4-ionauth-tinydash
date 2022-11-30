@@ -48,7 +48,9 @@
                             <img src="<?= base_url('dashboard') ?>/assets/avatars/user.png" class="avatar-img rounded-circle">
                         </span>
                     </a>
+
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <p class="dropdown-item disabled"><?= getUsername() ?></p>
                         <a class="dropdown-item" href="#">Ubah Password</a>
                         <a class="dropdown-item" href="#">Logout</a>
                     </div>
