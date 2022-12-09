@@ -38,13 +38,13 @@
                 </a>
                 <ul class="collapse list-unstyled pl-4 w-100" id="ui-elements">
                     <li class="nav-item">
-                        <a class="nav-link pl-3" href="./ui-tabs-accordion.html"><span class="ml-1 item-text">Data Jalan</span></a>
+                        <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">Data Jalan</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pl-3" href="./ui-progress.html"><span class="ml-1 item-text">Data Jembatan</span></a>
+                        <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">Data Jembatan</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pl-3" href="./ui-progress.html"><span class="ml-1 item-text">Data Perangkat</span></a>
+                        <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">Data Perangkat</span></a>
                     </li>
                 </ul>
             </li>
@@ -56,13 +56,13 @@
                 </a>
                 <ul class="collapse list-unstyled pl-4 w-100" id="forms">
                     <li class="nav-item">
-                        <a class="nav-link pl-3" href="./form_wizard.html"><span class="ml-1 item-text">Wizard</span></a>
+                        <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">Wizard</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pl-3" href="./form_layouts.html"><span class="ml-1 item-text">Layouts</span></a>
+                        <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">Layouts</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pl-3" href="./form_upload.html"><span class="ml-1 item-text">File upload</span></a>
+                        <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">File upload</span></a>
                     </li>
                 </ul>
             </li>

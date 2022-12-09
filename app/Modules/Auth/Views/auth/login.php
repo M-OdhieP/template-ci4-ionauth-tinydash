@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
 
-  <link rel="stylesheet" href="<?= base_url("dashboard/login/bootstrap.min.css") ?>">
+  <link rel="stylesheet" href="<?= base_url("modules_assets/dashboard/login/bootstrap.min.css") ?>">
 
 
 </head>
@@ -16,7 +16,7 @@
 
   <style>
     .login-container {
-      background: url(<?= base_url("dashboard/login/login_image.jpg") ?>);
+      background: url(<?= base_url("modules_assets/dashboard/login/login_image.jpg") ?>);
       background-repeat: no-repeat;
       background-size: cover;
       height: 100vh;
@@ -34,7 +34,7 @@
         <div class="card text-bg-dark">
           <div class="card-header ">
             <div class="d-flex flex-column  align-items-center">
-              <img class="img-fluid login-logo" src="<?= base_url("dashboard/assets/images/app-logo.png") ?>" alt="" srcset="">
+              <img class="img-fluid login-logo" src="<?= base_url("modules_assets/dashboard/assets/images/app-logo.png") ?>" alt="" srcset="">
               <h3> Login Page</h3>
             </div>
           </div>
@@ -61,6 +61,6 @@
 
 </body>
 
-<script src="<?= base_url("dashboard/login/bootstrap.min.js") ?>"></script>
+<script src="<?= base_url("modules_assets/dashboard/login/bootstrap.min.js") ?>"></script>
 
 </html>

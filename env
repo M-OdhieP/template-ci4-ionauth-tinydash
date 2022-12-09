@@ -58,6 +58,8 @@ database.default.port = 3306
 #--------------------------------------------------------------------
 # CONTENT SECURITY POLICY
 #--------------------------------------------------------------------
+#  dave_bmbk
+#  5sbNkwd85sbNkwd8
 
 # contentsecuritypolicy.reportOnly = false
 # contentsecuritypolicy.defaultSrc = 'none'

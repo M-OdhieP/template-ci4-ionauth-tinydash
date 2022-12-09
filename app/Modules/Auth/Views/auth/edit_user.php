@@ -4,8 +4,6 @@
 <link rel="stylesheet" href="<?= base_url('dashboard/css/dataTables.bootstrap4.css') ?>">
 <?= $this->endSection(); ?>
 
-
-
 <?= $this->section('content'); ?>
 <?php $validation = \Config\Services::validation(); ?>
 
@@ -49,7 +47,6 @@
                                                 </div>
                                           </div>
                                           <div class="form-row">
-
                                                 <div class="form-group col-md-6">
                                                       <label for="password">Password</label>
                                                       <input type="password" class="form-control" name="password" id="password">
@@ -76,29 +73,22 @@
                                                                   }
                                                             }
                                                             ?>
-
                                                             <div class="custom-control custom-checkbox">
                                                                   <input type="checkbox" class="custom-control-input" id="<?= $group['name'] ?>" name="groups[]" value="<?php echo $group['id']; ?>" <?php echo $checked; ?>>
                                                                   <label class="custom-control-label" for="<?= $group['name'] ?>"><?= $group['name'] ?></label>
                                                             </div>
-
                                                       <?php endforeach ?>
                                                 </div>
                                           <?php endif ?>
                                           <?php echo form_hidden('id', $user->id); ?>
-
-
-
-
                                           <button type="submit" class="btn btn-primary">Update User</button>
                                           </form>
-
                                     </div>
                               </div>
-                        </div> <!-- simple table -->
-                  </div> <!-- end section -->
-            </div> <!-- .col-12 -->
-      </div> <!-- .row -->
-</div> <!-- .container-fluid -->
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>
 
 <?= $this->endSection(); ?>

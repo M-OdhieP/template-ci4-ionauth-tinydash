@@ -46,12 +46,12 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('css'); ?>
-<link rel="stylesheet" href="<?= base_url('dashboard/css/dataTables.bootstrap4.css') ?>">
+<link rel="stylesheet" href="<?= base_url('modules_assets/dashboard/css/dataTables.bootstrap4.css') ?>">
 <?= $this->endSection(); ?>
 
 <?= $this->section('js'); ?>
-<script src='<?= base_url('dashboard/js/jquery.dataTables.min.js') ?>'></script>
-<script src='<?= base_url('dashboard/js/dataTables.bootstrap4.min.js') ?>'></script>
+<script src='<?= base_url('modules_assets/dashboard/js/jquery.dataTables.min.js') ?>'></script>
+<script src='<?= base_url('modules_assets/dashboard/js/dataTables.bootstrap4.min.js') ?>'></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     $('#dataTable-1').DataTable({

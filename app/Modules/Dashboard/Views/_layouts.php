@@ -9,16 +9,16 @@
     <link rel="icon" href="favicon.ico">
     <title>Template</title>
     <!-- Simple bar CSS -->
-    <link rel="stylesheet" href="<?= base_url("dashboard/css/simplebar.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("modules_assets/dashboard/css/simplebar.css") ?>">
     <!-- Fonts CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Icons CSS -->
-    <link rel="stylesheet" href="<?= base_url("dashboard/css/feather.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("modules_assets/dashboard/css/feather.css") ?>">
     <!-- Date Range Picker CSS -->
-    <link rel="stylesheet" href="<?= base_url("dashboard/css/daterangepicker.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("modules_assets/dashboard/css/daterangepicker.css") ?>">
     <!-- App CSS -->
-    <link rel="stylesheet" href="<?= base_url("dashboard/css/app-light.css") ?>" id="lightTheme" disabled>
-    <link rel="stylesheet" href="<?= base_url("dashboard/css/app-dark.css") ?>" id="darkTheme">
+    <link rel="stylesheet" href="<?= base_url("modules_assets/dashboard/css/app-light.css") ?>" id="lightTheme" disabled>
+    <link rel="stylesheet" href="<?= base_url("modules_assets/dashboard/css/app-dark.css") ?>" id="darkTheme">
 
     <?= $this->renderSection('css'); ?>
 </head>
@@ -45,7 +45,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted pr-0" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="avatar avatar-sm mt-2">
-                            <img src="<?= base_url('dashboard') ?>/assets/avatars/user.png" class="avatar-img rounded-circle">
+                            <img src="<?= base_url('modules_assets/dashboard/assets/avatars/user.png') ?>" class="avatar-img rounded-circle">
                         </span>
                     </a>
 
@@ -123,16 +123,16 @@
             </div>
         </main> <!-- main -->
     </div> <!-- .wrapper -->
-    <script src="<?= base_url("dashboard/js/jquery.min.js") ?>"></script>
-    <script src="<?= base_url("dashboard/js/popper.min.js") ?>"></script>
-    <script src="<?= base_url("dashboard/js/moment.min.js") ?>"></script>
-    <script src="<?= base_url("dashboard/js/bootstrap.min.js") ?>"></script>
-    <script src="<?= base_url("dashboard/js/simplebar.min.js") ?>"></script>
-    <script src="<?= base_url("dashboard/js/daterangepicker.js") ?>"></script>
-    <script src="<?= base_url("dashboard/js/jquery.stickOnScroll.js") ?>"></script>
-    <script src="<?= base_url("dashboard/js/tinycolor-min.js") ?>"></script>
-    <script src="<?= base_url("dashboard/js/config.js") ?>"></script>
-    <script src="<?= base_url("dashboard/js/apps.js") ?>"></script>
+    <script src="<?= base_url("modules_assets/dashboard/js/jquery.min.js") ?>"></script>
+    <script src="<?= base_url("modules_assets/dashboard/js/popper.min.js") ?>"></script>
+    <script src="<?= base_url("modules_assets/dashboard/js/moment.min.js") ?>"></script>
+    <script src="<?= base_url("modules_assets/dashboard/js/bootstrap.min.js") ?>"></script>
+    <script src="<?= base_url("modules_assets/dashboard/js/simplebar.min.js") ?>"></script>
+    <script src="<?= base_url("modules_assets/dashboard/js/daterangepicker.js") ?>"></script>
+    <script src="<?= base_url("modules_assets/dashboard/js/jquery.stickOnScroll.js") ?>"></script>
+    <script src="<?= base_url("modules_assets/dashboard/js/tinycolor-min.js") ?>"></script>
+    <script src="<?= base_url("modules_assets/dashboard/js/config.js") ?>"></script>
+    <script src="<?= base_url("modules_assets/dashboard/js/apps.js") ?>"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <?= $this->renderSection('js'); ?>
