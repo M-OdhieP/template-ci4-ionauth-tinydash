@@ -9,9 +9,9 @@
 
 <div class="container-fluid">
       <div class="row justify-content-center">
-            <div class="col-12">
+            <div class="col-12 p-0">
                   <h2 class="mb-2 page-title">Edit User</h2>
-                  <div class="row my-4">
+                  <div class="row my-2">
                         <!-- Small table -->
                         <div class="col-md-12">
                               <div class="card shadow">

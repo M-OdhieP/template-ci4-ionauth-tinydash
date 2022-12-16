@@ -3,9 +3,9 @@
 
 <div class="container-fluid">
       <div class="row justify-content-center">
-            <div class="col-12">
+            <div class="col-12 p-0">
                   <h2 class="mb-2 page-title">Create Group</h2>
-                  <div class="row my-4">
+                  <div class="row my-2">
                         <div class="col-md-12">
                               <div class="card shadow">
                                     <div class="card-body">

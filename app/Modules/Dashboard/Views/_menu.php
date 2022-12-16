@@ -31,6 +31,20 @@
         </p>
 
         <ul class="navbar-nav flex-fill w-100 mb-2">
+
+            <li class="nav-item w-100">
+                <a class="nav-link" href="<?= base_url("blank") ?>">
+                    <i class="fe fe-file fe-16"></i>
+                    <span class="ml-3 item-text">blank page</span>
+                </a>
+            </li>
+            <li class="nav-item w-100">
+                <a class="nav-link" href="<?= base_url("example_index_crud") ?>">
+                    <i class="fe fe-file fe-16"></i>
+                    <span class="ml-3 item-text">New Content page</span>
+                </a>
+            </li>
+
             <li class="nav-item dropdown">
                 <a href="#ui-elements" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
                     <i class="fe fe-box fe-16"></i>
@@ -95,9 +109,15 @@
             </li>
 
 
-
+            <li class="nav-item w-100">
+                <a class="nav-link" href="<?= base_url("dashboard/setting") ?>">
+                    <i class="fe fe-settings fe-16"></i>
+                    <span class="ml-3 item-text">Setting</span>
+                </a>
+            </li>
 
         </ul>
+
 
     </nav>
 </aside>

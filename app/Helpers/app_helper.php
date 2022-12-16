@@ -31,3 +31,11 @@ function getUsername()
     $user = $ionAuth->user()->row();
     return $user->first_name . ' ' . $user->last_name;
 }
+
+function get_title()
+{
+    $setting = new \App\Modules\Dashboard\Models\Settings();
+    $title = $setting->select("app_name")->first();
+
+    return $title->app_name;
+}

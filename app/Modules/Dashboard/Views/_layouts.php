@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
-    <title>Template</title>
+    <link rel="icon" href="<?= base_url('uploaded_file/settings/favicon.png') ?>">
+    <title id="main_title"><?= get_title() ?></title>
+
     <!-- Simple bar CSS -->
     <link rel="stylesheet" href="<?= base_url("modules_assets/dashboard/css/simplebar.css") ?>">
     <!-- Fonts CSS -->
@@ -18,7 +19,11 @@
     <link rel="stylesheet" href="<?= base_url("modules_assets/dashboard/css/daterangepicker.css") ?>">
     <!-- App CSS -->
     <link rel="stylesheet" href="<?= base_url("modules_assets/dashboard/css/app-light.css") ?>" id="lightTheme" disabled>
+
     <link rel="stylesheet" href="<?= base_url("modules_assets/dashboard/css/app-dark.css") ?>" id="darkTheme">
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="<?= base_url("modules_assets/dashboard/css/custom.css") ?>">
 
     <?= $this->renderSection('css'); ?>
 </head>
@@ -141,6 +146,24 @@
         $("#messages").fadeTo(2000, 500).slideUp(500, function() {
             $("#messages").slideUp(500);
         });
+
+        <?php if (session('success')) : ?>
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: '<?= session('success') ?>',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        <?php endif; ?>
+        <?php if (session('error')) : ?>
+            Swal.fire({
+                icon: 'error',
+                title: '<?= session('error') ?>',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        <?php endif; ?>
     </script>
 
 </body>
