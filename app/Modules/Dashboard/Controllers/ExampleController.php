@@ -64,7 +64,6 @@ class ExampleController extends BaseController
             }
         }
 
-
         $model->update($id, $data);
 
         return json_encode([
@@ -92,7 +91,7 @@ class ExampleController extends BaseController
         ]);
     }
 
-    public function get_all_data()
+    public function fetch_all_data()
     {
         $model = new Models\ExampleModel();
         $data  = $model->findAll();
@@ -100,6 +99,40 @@ class ExampleController extends BaseController
             'item' => $data
         ]);
     }
+
+    public function get_all_data()
+    {
+        helper('text');
+        $data['data'] = array();
+        $model = new Models\ExampleModel();
+        $result =  $model->select('id, name, email, message, image')->findAll();
+
+        foreach ($result as $key => $value) {
+
+            $ops = '<div class="text-center" >';
+            $ops .= ' <button type="button" class="btn btn-sm btn-warning" onclick="edit_btn(' . $value->id . ')"><span class="fe fe-edit fe-16 mr-2"></span> Edit</button>';
+            $ops .= ' <button type="button" class="btn btn-sm btn-danger" onclick="delete_btn(' . $value->id . ')"><span class="fe fe-trash fe-16 mr-2"></span> Delete</button>';
+            $ops .= '</div>';
+
+            if (!$value->image) {
+                $value->image = 'blank.png';
+            }
+            $image = '<img src=' . base_url('uploaded_file/example_upload') . '/' . $value->image  . ' class="image-thumbnail">';
+
+            $data['data'][$key] = array(
+                $key + 1,
+                $value->name,
+                $value->email,
+                word_limiter($value->message, 6),
+                $image,
+                $ops
+            );
+        }
+
+        return $this->response->setJSON($data);
+    }
+
+
     public function get_one($id)
     {
         $model = new Models\ExampleModel();
@@ -112,7 +145,6 @@ class ExampleController extends BaseController
     private function uploadImage()
     {
         $file = $this->request->getFile('image');
-
         if ($file->isValid() && !$file->hasMoved()) {
             $newName = $file->getRandomName();
             $file->move('uploaded_file/example_upload', $newName);

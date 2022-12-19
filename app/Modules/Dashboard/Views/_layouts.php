@@ -149,7 +149,7 @@
 
         <?php if (session('success')) : ?>
             Swal.fire({
-                position: 'top-end',
+                // position: 'top-end',
                 icon: 'success',
                 title: '<?= session('success') ?>',
                 showConfirmButton: false,

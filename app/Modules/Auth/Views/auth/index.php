@@ -39,8 +39,8 @@
 											<td><?php echo ($user->active) ? anchor('auth/deactivate/' . $user->id, lang('Auth.index_active_link')) : anchor("auth/activate/" . $user->id, lang('Auth.index_inactive_link')); ?></td>
 											<td class="text-center">
 												<div>
-													<a href="<?= base_url("auth/edit_user/" . $user->id) ?>"><button type="button" class="btn mb-2 btn-info"><span class="fe fe-edit fe-16 mr-2"></span>Edit</button></a>
-													<a href="<?= base_url("auth/delete_user/" . $user->id) ?>" class="btn-delete"><button type="button" class="btn mb-2 btn-danger"><span class="fe fe-trash fe-16 mr-2"></span>Delete</button></a>
+													<a href="<?= base_url("auth/edit_user/" . $user->id) ?>"><button type="button" class="btn btn-sm mb-1 btn-warning"><span class="fe fe-edit fe-16 mr-2"></span>Edit</button></a>
+													<a href="<?= base_url("auth/delete_user/" . $user->id) ?>" class="btn-delete"><button type="button" class="btn btn-sm mb-1 btn-danger"><span class="fe fe-trash fe-16 mr-2"></span>Delete</button></a>
 												</div>
 											</td>
 										</tr>
