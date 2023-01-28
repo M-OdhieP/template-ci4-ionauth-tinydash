@@ -129,7 +129,7 @@
                                                     <img id="image-thumbnail_edit" src="#" alt="Image thumbnail" class="image-thumbnail-new-content">
                                                     <div class="custom-file">
                                                         <input type="file" class="custom-file-input" id="image_edit" name="image" />
-                                                        <label class="custom-file-label" for="image">Choose file</label>
+                                                        <label class="custom-file-label" id="file-label-edit" for="image">Choose file</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -155,16 +155,12 @@
 
         <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
-
         <script src='<?= base_url('modules_assets/dashboard/js/jquery.dataTables.min.js') ?>'></script>
         <script src='<?= base_url('modules_assets/dashboard/js/dataTables.bootstrap4.min.js') ?>'></script>
-
         <script src="<?= base_url("modules_assets/dashboard/custom_assets/custom_validate.js") ?>"></script>
 
         <script>
             $("#main_title").append(' | <?= $title ?>')
-
-
 
             $(function() {
                 $('#dataTable-1').DataTable({
@@ -294,6 +290,7 @@
                         $("#name_edit").val(data.name)
                         $("#email_edit").val(data.email)
                         $("#message_edit").html(data.message)
+                        $('#file-label-edit').text("Choose File to Change the image");
 
                         if (data.image) {
                             $("#image-thumbnail_edit")
@@ -320,9 +317,15 @@
             });
 
 
+            // $('.custom-file-input').on('change', function() {
+            //     let fileName = $(this).val().split('\\').pop();
+            //     $(this).next('.custom-file-label').html(fileName);
+            // });
+
             $('.custom-file-input').on('change', function() {
-                let fileName = $(this).val().split('\\').pop();
-                $(this).next('.custom-file-label').html(fileName);
+                const fileInput = this;
+                const fileName = fileInput.files[0].name;
+                $(fileInput).next('.custom-file-label').text(fileName);
             });
 
             $("#image").change(function() {
@@ -336,15 +339,22 @@
                 }
             });
             $("#image_edit").change(function() {
-                if (this.files && this.files[0]) {
+                // Get the file name
+                var fileName = $(this).val();
+
+                // Check if the file has an image file extension
+                if (/\.(jpe?g|png|gif)$/i.test(fileName)) {
                     var reader = new FileReader();
                     reader.onload = function(e) {
                         $("#image-thumbnail_edit").attr("src", e.target.result);
                         $("#image-thumbnail_edit").css("display", "block");
                     }
                     reader.readAsDataURL(this.files[0]);
+                } else {
+                    // Display an error message or do something else if the file is not an image
                 }
             });
+
 
             $(document).ready(function() {
                 // get_all_data()

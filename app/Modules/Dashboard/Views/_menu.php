@@ -26,9 +26,9 @@
                 </a>
             </li>
         </ul>
-        <p class="text-muted nav-heading mt-4 mb-1">
+        <!-- <p class="text-muted nav-heading mt-4 mb-1">
             <span>Components</span>
-        </p>
+        </p> -->
 
         <ul class="navbar-nav flex-fill w-100 mb-2">
 
